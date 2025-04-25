@@ -7,7 +7,7 @@ This repository tracks my progress and assignments in FDA Course
 ### Assignment 1: Linear Regression Salary Questions
 - **Description**: This assignment involved using linear regression to predict salaries based on years of experience.
 - **Files**:
-  - [Assignment 1 Answers](./Mohammad_Tayyab_Alam_24157_Assignment_1_Answers_1.docx)
+  - [Assignment 1 Answers](./Mohammad_Tayyab_Alam_24157_Assignment_1_Answers_1 (1).docx)
   - Colab Notebook: [Linear Regression - Salary Prediction](https://colab.research.google.com/drive/1GuYH2U4uA1c0WX0NTd4_Ay6eQZo75dgV?usp=sharing)
 
 ### Assignment 2: Startup Profit Prediction
