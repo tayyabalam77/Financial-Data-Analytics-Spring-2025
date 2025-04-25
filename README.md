@@ -186,194 +186,172 @@ This assignment provided valuable insights into **Linear Regression** and **Mult
 
 
 
-Assignment 2: Logistic Regression Model for Fraudulent Insurance Claims
-Objective:
-The objective of this assignment was to build a logistic regression model to classify fraudulent (1) and non-fraudulent (0) insurance claims. We aimed to evaluate the model’s performance using different techniques for handling class imbalance, model evaluation metrics, and feature engineering.
 
-Steps Taken:
-Data Preprocessing and Exploratory Data Analysis (EDA):
 
-Data Loading: The dataset was loaded, and basic statistics were computed. This revealed no missing values, which streamlined preprocessing.
 
-Exploratory Data Analysis:
+---
 
-Statistical Summary: Insights were gained into columns like PolicyholderAge, ClaimAmount, and Fraud distribution.
+### **Assignment 2: Logistic Regression Model for Fraudulent Insurance Claims**
 
-Class Imbalance: The Fraud class had a significant imbalance with only 1% fraudulent claims, emphasizing the need for methods to address this issue.
+#### **Objective:**
+The objective of this assignment was to build a **logistic regression model** to classify fraudulent (1) and non-fraudulent (0) insurance claims. We aimed to evaluate the model’s performance using different techniques for handling class imbalance, model evaluation metrics, and feature engineering.
 
-Visualization: Class distribution was plotted, and box plots helped identify outliers in numerical features like ClaimAmount and LossHour.
+#### **Steps Taken:**
 
-Correlation Heatmap: A heatmap was generated to visualize correlations between variables, aiding in feature selection.
+1. **Data Preprocessing and Exploratory Data Analysis (EDA):**
+   - **Data Loading**: The dataset was loaded, and basic statistics were computed. This revealed no missing values, which streamlined preprocessing.
+   - **Exploratory Data Analysis**: 
+     - **Statistical Summary**: Insights were gained into columns like **PolicyholderAge**, **ClaimAmount**, and **Fraud** distribution.
+     - **Class Imbalance**: The **Fraud** class had a significant imbalance with only 1% fraudulent claims, emphasizing the need for methods to address this issue.
+     - **Visualization**: Class distribution was plotted, and box plots helped identify outliers in numerical features like **ClaimAmount** and **LossHour**. 
+     - **Correlation Heatmap**: A heatmap was generated to visualize correlations between variables, aiding in feature selection.
+     - **Feature Engineering**: Multiple features were created based on insights such as **ClaimAgeRatio** (policyholder age to vehicle age) and **ClaimAmountPerPolicy** to help improve the model’s predictive power.
 
-Feature Engineering: Multiple features were created based on insights such as ClaimAgeRatio (policyholder age to vehicle age) and ClaimAmountPerPolicy to help improve the model’s predictive power.
+2. **Handling Class Imbalance:**
+   - **Class Imbalance Issue**: A severe imbalance was identified, with 99% of claims being non-fraudulent. This was addressed using techniques such as:
+     - **SMOTE (Synthetic Minority Over-sampling Technique)** to create synthetic fraudulent samples and balance the dataset.
+     - **Undersampling**: Reducing the number of non-fraudulent samples to match the number of fraudulent claims.
+     - **Cost-sensitive Learning**: Adjusting the class weights in the logistic regression model to penalize misclassifying fraud cases more heavily.
 
-Handling Class Imbalance:
+3. **Model Training:**
+   - **Logistic Regression**: A basic logistic regression model was trained on the data without addressing class imbalance, serving as a control model.
+   - **Stratified Train-Test Split**: Ensured that both the training and testing datasets maintained the same class distribution using a 70:30 split.
 
-Class Imbalance Issue: A severe imbalance was identified, with 99% of claims being non-fraudulent. This was addressed using techniques such as:
+4. **Model Evaluation:**
+   - The model’s performance was evaluated using several key metrics:
+     - **Accuracy**: General performance measure, although not suitable for imbalanced data.
+     - **Precision and Recall**: Precision evaluates the correctness of predicted fraud cases, and recall measures the model’s ability to identify fraud cases.
+     - **F1-Score**: A balance between precision and recall, especially important for class-imbalanced datasets.
+     - **AUC-ROC**: Measures the model's ability to distinguish between classes.
+     - **Confusion Matrix**: Analyzed false positives (FP) and false negatives (FN) for understanding model performance.
 
-SMOTE (Synthetic Minority Over-sampling Technique) to create synthetic fraudulent samples and balance the dataset.
+5. **Model Performance Without Class Imbalance Handling:**
+   - The model without any class imbalance handling showed an **accuracy** of 99%, but failed to identify fraud cases, as evident from the confusion matrix where all fraudulent claims were misclassified as non-fraudulent.
 
-Undersampling: Reducing the number of non-fraudulent samples to match the number of fraudulent claims.
+6. **Model Performance with SMOTE:**
+   - **SMOTE** improved recall, indicating better fraud detection, but the model still struggled with **false positives**, as it predicted a lot of non-fraud cases as fraudulent.
+   - Evaluation metrics showed improvement in recall but a drop in precision, making it a better option for fraud detection but needing further refinement.
 
-Cost-sensitive Learning: Adjusting the class weights in the logistic regression model to penalize misclassifying fraud cases more heavily.
+7. **Model Performance with Undersampling:**
+   - **Automatic Undersampling** was applied to balance the classes. This method improved recall but at the expense of accuracy and increased false positives, indicating the trade-off between false negatives and false positives when dealing with imbalanced data.
 
-Model Training:
+8. **Model Performance with Cost-Sensitive Learning:**
+   - The **cost-sensitive model** adjusted the misclassification penalties, which reduced false positives while maintaining recall, leading to a more balanced model.
 
-Logistic Regression: A basic logistic regression model was trained on the data without addressing class imbalance, serving as a control model.
+9. **Manual Undersampling and Feature Engineering**:
+   - **Manual Undersampling** was performed by balancing the dataset using fraud cases and non-fraud cases to match the number of fraud cases, followed by model training.
+   - **Feature Engineering** improved the model’s performance by adding more informative features that helped the model better distinguish between fraudulent and non-fraudulent claims.
 
-Stratified Train-Test Split: Ensured that both the training and testing datasets maintained the same class distribution using a 70:30 split.
+10. **Final Model Selection and Evaluation**:
+    - The **final selected model** used **manual undersampling** and **feature engineering**. It achieved the best performance in terms of **recall (67%)** and **F1-Score (2.5%)**. Although the accuracy was low, the recall was prioritized for fraud detection.
+    - The model was further improved with **L1 regularization** (Lasso), which helped eliminate irrelevant features and slightly improved the **AUC** score.
 
-Model Evaluation:
+11. **Threshold Adjustment**:
+    - Multiple threshold adjustment techniques were explored to improve **recall** and **precision** while minimizing false positives. This involved varying the threshold to maximize the F1-score and recall, depending on the business requirement to either reduce false negatives or false positives.
 
-The model’s performance was evaluated using several key metrics:
+---
 
-Accuracy: General performance measure, although not suitable for imbalanced data.
+#### **Insights and Recommendations**:
+- **Class Imbalance**: Handling class imbalance was crucial to improving fraud detection. Without techniques like SMOTE or undersampling, the model performed poorly on fraud cases.
+- **Feature Engineering**: Creating new features based on domain knowledge was vital to improving the model’s predictive power, especially for detecting fraud in an imbalanced dataset.
+- **Model Evaluation**: Metrics like **recall** and **F1-Score** were prioritized due to the importance of detecting fraudulent claims accurately.
+- **Future Improvements**: 
+  - More advanced models like **XGBoost** or **CatBoost** could improve detection further, as they are more robust in handling imbalanced datasets.
+  - **Anomaly detection** techniques might be helpful in detecting rare fraud cases, as fraud is a rare event in this dataset.
+  - Further **parameter tuning** for methods like SMOTE and undersampling could help fine-tune model performance.
 
-Precision and Recall: Precision evaluates the correctness of predicted fraud cases, and recall measures the model’s ability to identify fraud cases.
+---
 
-F1-Score: A balance between precision and recall, especially important for class-imbalanced datasets.
+This detailed explanation covers all the essential parts of your **Assignment 2**, which demonstrates your approach to solving the fraud detection problem using **logistic regression** with class imbalance handling, **model evaluation**, and **feature engineering**.
 
-AUC-ROC: Measures the model's ability to distinguish between classes.
 
-Confusion Matrix: Analyzed false positives (FP) and false negatives (FN) for understanding model performance.
 
-Model Performance Without Class Imbalance Handling:
 
-The model without any class imbalance handling showed an accuracy of 99%, but failed to identify fraud cases, as evident from the confusion matrix where all fraudulent claims were misclassified as non-fraudulent.
 
-Model Performance with SMOTE:
 
-SMOTE improved recall, indicating better fraud detection, but the model still struggled with false positives, as it predicted a lot of non-fraud cases as fraudulent.
 
-Evaluation metrics showed improvement in recall but a drop in precision, making it a better option for fraud detection but needing further refinement.
+---
 
-Model Performance with Undersampling:
+### **Assignment 3: Customer Segmentation using K-Means Clustering**
 
-Automatic Undersampling was applied to balance the classes. This method improved recall but at the expense of accuracy and increased false positives, indicating the trade-off between false negatives and false positives when dealing with imbalanced data.
+#### **Question 1: Feature Creation and Model Evaluation**
+In this assignment, several **new features** were developed to capture more detailed customer behaviors and improve the segmentation accuracy. The features created include:
 
-Model Performance with Cost-Sensitive Learning:
+- **D2I (Debt-to-Income Ratio)**: This feature measures a customer's financial leverage by dividing their **Total Relationship Balance (TRB)** by their **Income**. A high D2I indicates a higher reliance on debt relative to income.
+  
+- **DIG_ENG_SCORE (Digital Engagement Score)**: This score was created by summing the activities a customer engages in, such as **DIG_ACTIVE** (digital activity), **FX_TRANS** (foreign exchange transactions), and **PAYME** (payments). This feature quantifies a customer's engagement with digital services.
 
-The cost-sensitive model adjusted the misclassification penalties, which reduced false positives while maintaining recall, leading to a more balanced model.
+- **TECH_SAVVY**: This feature flags customers who actively use multiple digital services, indicating their comfort with technology.
 
-Manual Undersampling and Feature Engineering:
+- **HNWI (High-Net-Worth Individual)**: This flag is set for customers who are high-net-worth individuals, based on their usage of **premium products**, such as **mortgages** and **bonds**.
 
-Manual Undersampling was performed by balancing the dataset using fraud cases and non-fraud cases to match the number of fraud cases, followed by model training.
+- **Age Categories**: Customers were grouped into different age categories, recognizing that **age** correlates with different spending and saving habits. For instance, younger customers (in their 20s) might have lower savings but could be highly engaged in digital financial activities.
 
-Feature Engineering improved the model’s performance by adding more informative features that helped the model better distinguish between fraudulent and non-fraudulent claims.
-
-Final Model Selection and Evaluation:
-
-The final selected model used manual undersampling and feature engineering. It achieved the best performance in terms of recall (67%) and F1-Score (2.5%). Although the accuracy was low, the recall was prioritized for fraud detection.
-
-The model was further improved with L1 regularization (Lasso), which helped eliminate irrelevant features and slightly improved the AUC score.
-
-Threshold Adjustment:
-
-Multiple threshold adjustment techniques were explored to improve recall and precision while minimizing false positives. This involved varying the threshold to maximize the F1-score and recall, depending on the business requirement to either reduce false negatives or false positives.
-
-
-
-
-
-
-
-
-Assignment 3: Customer Segmentation using K-Means Clustering
-Question 1: Feature Creation and Model Evaluation
-In this assignment, several new features were developed to capture more detailed customer behaviors and improve the segmentation accuracy. The features created include:
-
-D2I (Debt-to-Income Ratio): This feature measures a customer's financial leverage by dividing their Total Relationship Balance (TRB) by their Income. A high D2I indicates a higher reliance on debt relative to income.
-
-DIG_ENG_SCORE (Digital Engagement Score): This score was created by summing the activities a customer engages in, such as DIG_ACTIVE (digital activity), FX_TRANS (foreign exchange transactions), and PAYME (payments). This feature quantifies a customer's engagement with digital services.
-
-TECH_SAVVY: This feature flags customers who actively use multiple digital services, indicating their comfort with technology.
-
-HNWI (High-Net-Worth Individual): This flag is set for customers who are high-net-worth individuals, based on their usage of premium products, such as mortgages and bonds.
-
-Age Categories: Customers were grouped into different age categories, recognizing that age correlates with different spending and saving habits. For instance, younger customers (in their 20s) might have lower savings but could be highly engaged in digital financial activities.
-
-By adding these features, the model's performance significantly improved. Initially, the silhouette score (a measure of clustering quality) was 0.178 without the features, indicating poorly defined clusters. After incorporating the new features, the silhouette score improved to 0.686 at K=5, showing better-defined clusters and more accurate customer segmentation.
-
-Question 2: How Customer Segmentation Helps HSBC's Customer Life Cycle Management (CLCM)
-Using K-Means clustering, HSBC can refine its Customer Life Cycle Management (CLCM) strategy by segmenting customers into distinct groups based on their financial behaviors and engagement. The following clusters were identified:
-
-Cluster 0: Students (Acquisition Phase)
-
-Income: 25,184 (Low)
-
-TRB: 68,380 (Moderate)
-
-D2I: 6.68 (High debt-to-income ratio)
-
-DIG_ENG_SCORE: 1.51 (Moderate engagement)
-
-Strategy: HSBC can target this group with affordable loans and digital banking products. In-person engagement can help activate these customers and increase their digital engagement.
-
-Cluster 1: Affluent Professionals (Relationship Deepening Phase)
-
-Income: 33,282 (High)
-
-TRB: 212,943 (High)
-
-D2I: 8.39 (High debt-to-income ratio)
-
-DIG_ENG_SCORE: 1.46 (Moderate engagement)
-
-Strategy: HSBC should offer financial planning and investment advice to help these customers manage risk and deepen their relationship.
-
-Cluster 2: Mid-Level Professionals (Relationship Deepening Phase)
-
-Income: 29,998 (Mid)
-
-TRB: 153,498 (Moderate)
-
-D2I: 5.40 (Moderate debt-to-income ratio)
-
-DIG_ENG_SCORE: 1.51 (Moderate engagement)
-
-Strategy: HSBC should introduce mobile-first banking services to cater to this group, enhancing engagement through digital platforms while offering in-person assistance to overcome lower digital engagement.
-
-Cluster 3: Financially Stable Professionals (Relationship Deepening Phase)
-
-Income: 39,799 (Higher income)
-
-TRB: 177,477 (Moderate)
-
-D2I: 4.56 (Low debt-to-income ratio)
-
-DIG_ENG_SCORE: 2.00 (High engagement)
-
-Strategy: Offer private equity investments and digital wealth management services, providing more opportunities for these financially stable individuals to grow their wealth.
-
-Cluster 4: High Income, High Debt, Very High Digital Engagement (Relationship Deepening Phase)
-
-Income: 38,809 (High income)
-
-TRB: 225,590 (High)
-
-D2I: 8.39 (High debt-to-income ratio)
-
-DIG_ENG_SCORE: 3.00 (Very high engagement)
-
-Strategy: This group requires wealth management services via robo-advisors and app-based support, helping them manage their finances more effectively through high-tech solutions.
+By adding these features, the model's performance significantly improved. Initially, the **silhouette score** (a measure of clustering quality) was **0.178** without the features, indicating poorly defined clusters. After incorporating the new features, the silhouette score improved to **0.686** at **K=5**, showing better-defined clusters and more accurate customer segmentation.
+
+#### **Question 2: How Customer Segmentation Helps HSBC's Customer Life Cycle Management (CLCM)**
+Using **K-Means clustering**, HSBC can refine its **Customer Life Cycle Management (CLCM)** strategy by segmenting customers into distinct groups based on their financial behaviors and engagement. The following clusters were identified:
+
+- **Cluster 0: Students (Acquisition Phase)**
+  - **Income**: 25,184 (Low)
+  - **TRB**: 68,380 (Moderate)
+  - **D2I**: 6.68 (High debt-to-income ratio)
+  - **DIG_ENG_SCORE**: 1.51 (Moderate engagement)
+  - **Strategy**: HSBC can target this group with **affordable loans** and **digital banking products**. In-person engagement can help activate these customers and increase their digital engagement.
+
+- **Cluster 1: Affluent Professionals (Relationship Deepening Phase)**
+  - **Income**: 33,282 (High)
+  - **TRB**: 212,943 (High)
+  - **D2I**: 8.39 (High debt-to-income ratio)
+  - **DIG_ENG_SCORE**: 1.46 (Moderate engagement)
+  - **Strategy**: HSBC should offer **financial planning** and **investment advice** to help these customers manage risk and deepen their relationship.
+
+- **Cluster 2: Mid-Level Professionals (Relationship Deepening Phase)**
+  - **Income**: 29,998 (Mid)
+  - **TRB**: 153,498 (Moderate)
+  - **D2I**: 5.40 (Moderate debt-to-income ratio)
+  - **DIG_ENG_SCORE**: 1.51 (Moderate engagement)
+  - **Strategy**: HSBC should introduce **mobile-first banking** services to cater to this group, enhancing engagement through digital platforms while offering in-person assistance to overcome lower digital engagement.
+
+- **Cluster 3: Financially Stable Professionals (Relationship Deepening Phase)**
+  - **Income**: 39,799 (Higher income)
+  - **TRB**: 177,477 (Moderate)
+  - **D2I**: 4.56 (Low debt-to-income ratio)
+  - **DIG_ENG_SCORE**: 2.00 (High engagement)
+  - **Strategy**: Offer **private equity investments** and **digital wealth management** services, providing more opportunities for these financially stable individuals to grow their wealth.
+
+- **Cluster 4: High Income, High Debt, Very High Digital Engagement (Relationship Deepening Phase)**
+  - **Income**: 38,809 (High income)
+  - **TRB**: 225,590 (High)
+  - **D2I**: 8.39 (High debt-to-income ratio)
+  - **DIG_ENG_SCORE**: 3.00 (Very high engagement)
+  - **Strategy**: This group requires **wealth management** services via **robo-advisors** and **app-based support**, helping them manage their finances more effectively through high-tech solutions.
 
 The segmentation provided detailed customer profiles that HSBC can use to tailor their products and services at various stages of the customer life cycle, from acquisition to retention.
 
-Question 3: Key Differences Between Top-Down and Bottom-Up Market Segmentation
-Top-Down Segmentation: This traditional segmentation approach uses predefined categories such as age groups, income levels, and geographic regions. For instance, you might create segments like Young_Low_HK (young, low income, domestic transactions) or MidCareer_Low_HK (mid-career, low income, moderate transaction behavior). While useful for broad categorizations, top-down segmentation lacks granularity in capturing customer behaviors.
+#### **Question 3: Key Differences Between Top-Down and Bottom-Up Market Segmentation**
+- **Top-Down Segmentation**: This traditional segmentation approach uses **predefined categories** such as age groups, income levels, and geographic regions. For instance, you might create segments like **Young_Low_HK** (young, low income, domestic transactions) or **MidCareer_Low_HK** (mid-career, low income, moderate transaction behavior). While useful for broad categorizations, top-down segmentation lacks granularity in capturing customer behaviors.
 
-Bottom-Up Segmentation: This approach takes a data-driven path, focusing on customer behaviors and interactions. Features like D2I, digital engagement, and tech-savviness provide more detailed insights into customer habits. For example, Cluster 4 represents high-net-worth individuals with high debt and high digital engagement, which top-down segmentation wouldn’t capture. This bottom-up approach leads to more precise customer profiles, especially for targeting specific financial behaviors like digital engagement.
+- **Bottom-Up Segmentation**: This approach takes a **data-driven** path, focusing on customer **behaviors** and interactions. Features like **D2I**, **digital engagement**, and **tech-savviness** provide more detailed insights into customer habits. For example, **Cluster 4** represents high-net-worth individuals with high debt and high digital engagement, which top-down segmentation wouldn’t capture. This bottom-up approach leads to more precise customer profiles, especially for targeting specific financial behaviors like **digital engagement**.
 
 In essence, top-down segmentation provides broad strokes, while bottom-up segmentation captures deeper, more actionable insights into customer behavior.
 
-Question 4: Application in Pakistani Financial Institutions
-In Pakistan, the median age is 20.6 years, and a large proportion of the population is Gen-Z and Millennials. These demographics align closely with the customer profiles identified in the case study. Here's how the findings could be applied in UBL Bank:
+#### **Question 4: Application in Pakistani Financial Institutions**
+In Pakistan, the median age is 20.6 years, and a large proportion of the population is **Gen-Z** and **Millennials**. These demographics align closely with the **customer profiles** identified in the case study. Here's how the findings could be applied in **UBL Bank**:
 
-Young Customers: The case study highlights the importance of digital engagement in the younger population, which is a significant part of Pakistan’s demographic. By creating features like Debt-to-Income ratios, Digital Engagement Scores, and identifying HNWI customers, UBL Bank can improve its customer segmentation and tailor offerings more effectively.
+- **Young Customers**: The case study highlights the importance of **digital engagement** in the younger population, which is a significant part of Pakistan’s demographic. By creating features like **Debt-to-Income ratios**, **Digital Engagement Scores**, and identifying **HNWI customers**, UBL Bank can improve its customer segmentation and tailor offerings more effectively.
 
-Digital Banking: Offering digital banking products, such as UBL Mobile Banking for students or young professionals, would engage this tech-savvy generation. Mobile-first services should be a priority, especially since this group prefers digital solutions over traditional banking methods.
+- **Digital Banking**: Offering digital banking products, such as **UBL Mobile Banking** for students or young professionals, would engage this tech-savvy generation. **Mobile-first services** should be a priority, especially since this group prefers digital solutions over traditional banking methods.
 
-Personalized Wealth Management for HNWIs: The case study shows that HNWI customers, especially those who are highly engaged digitally, need more personalized financial solutions. UBL Bank can create tailored wealth management services, offering these customers access to investment products and digital tools like robo-advisors.
+- **Personalized Wealth Management for HNWIs**: The case study shows that **HNWI** customers, especially those who are highly engaged digitally, need more personalized financial solutions. UBL Bank can create tailored wealth management services, offering these customers access to **investment products** and **digital tools** like robo-advisors.
+
+By using **K-Means clustering** and behavioral feature engineering, UBL Bank can move away from **traditional segmentation models** and focus on delivering **personalized experiences** for **young, digitally active** customers while catering to **affluent clients** with premium financial products.
+
+---
+
+### **Conclusion**
+In this assignment, the application of **K-Means clustering** provided valuable insights into customer segmentation. By creating **behavioral features** such as **Debt-to-Income ratios**, **digital engagement scores**, and identifying **high-net-worth individuals**, the segmentation became more detailed and accurate. This approach can be directly applied to enhance **customer life cycle management** strategies in **HSBC** and **UBL Bank**, enabling more personalized services and targeted marketing strategies.
+
 
 By using K-Means clustering and behavioral feature engineering, UBL Bank can move away from traditional segmentation models and focus on delivering personalized experiences for young, digitally active customers while catering to affluent clients with premium financial products.
 
