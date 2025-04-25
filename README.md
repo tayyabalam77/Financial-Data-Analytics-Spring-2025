@@ -262,8 +262,6 @@ The objective of this assignment was to build a **logistic regression model** to
 
 ---
 
-This detailed explanation covers all the essential parts of your **Assignment 2**, which demonstrates your approach to solving the fraud detection problem using **logistic regression** with class imbalance handling, **model evaluation**, and **feature engineering**.
-
 
 
 
