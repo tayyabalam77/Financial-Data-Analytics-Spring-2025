@@ -55,7 +55,7 @@ Nova Credit uses non-traditional, behavioral, and demographic data to assess the
 - Algorithms used included Logistic Regression, XGBoost, CatBoost, LightGBM, and Random Forest.
 - Evaluated across metrics such as LogLoss, Recall (Class 0 and 1), Precision, ROC AUC, and Accuracy.
 - Imbalance techniques tested: SMOTE, undersampling, class_weight
-- Outlier and missing value handling were tested using IQR filtering, median/mode replacement, and feature engineering.
+- Outlier and missing value handling were tested using IQR filtering, mean/median replacement, and feature engineering.
 - Blind test (700 rows) was used to ensure generalization of top models beyond the training set.
 
 The best models consistently achieved:
