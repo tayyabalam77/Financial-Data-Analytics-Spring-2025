@@ -19,7 +19,7 @@ This folder contains all files related to Assignment 1, including:
 ## Submitted Files:
 - [`Mohammad_Tayyab_Alam_24157_Assignment_1_Linear_Regression_Salary.ipynb`](https://github.com/tayyabalam77/course-progress/blob/main/assignments/Assignment_1/Mohammad_Tayyab_Alam_24157_Assignment_1_Linear_Regression_Salary.ipynb) – Linear regression for salary prediction  
 - [`Mohammad_Tayyab_Alam_24157_Assignment_1_MLR_Startup_Profit.ipynb`](https://github.com/tayyabalam77/course-progress/blob/main/assignments/Assignment_1/Mohammad_Tayyab_Alam_24157_Assignment_1_MLR_Startup_Profit.ipynb) – Multiple linear regression for startup profit  
-- [`Mohammad_Tayyab_Alam_24157_Assignment_1_Studentp_Regression_Applied.ipynb`](https://github.com/tayyabalam77/course-progress/blob/main/assignments/Assignment_1/Mohammad_Tayyab_Alam_24157_Assignment_1_Studentp_Regression_Applied.ipynb) – Regression applied to student dataset  
+- [`Mohammad_Tayyab_Alam_24157_Assignment_1_Studentp_Regression_Applied.ipynb`](https://github.com/tayyabalam77/course-progress/blob/main/assignments/Assignment_1/Mohammad_Tayyab_Alam_24157_Assignment_1_Student_Regression_Applied.ipynb) – Regression applied to student dataset  
 - [`Mohammad_Tayyab_Alam_24157_Assignment_1_Answers.docx`](https://github.com/tayyabalam77/course-progress/blob/main/assignments/Assignment_1/Mohammad_Tayyab_Alam_24157_Assignment_1_Answers.docx) – Conceptual write-up in Word format
 
 
