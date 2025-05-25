@@ -35,7 +35,7 @@
   - Lists, dictionaries, and tuples
   - NumPy and Pandas operations
 
-📎 **Quiz 4 File:** [Attach your PDF here once uploaded]
+📎 **Quiz 4 File:** [https://github.com/tayyabalam77/Financial-Data-Analytics-Spring-2025/blob/main/Programming_Quizzes/Mohammad%20Tayyab%20Alam%2024157%20Quiz%204.pdf]
 
 ---
 
