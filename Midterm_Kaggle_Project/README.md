@@ -26,11 +26,11 @@ The project explored **11 different models** using techniques like:
 
 | File | Description |
 |------|-------------|
-| [`24157_Mohammad_Tayyab_Alam_Midterm_KAGGLE.ipynb`](./24157_Mohammad_Tayyab_Alam_Midterm_KAGGLE.ipynb) | Jupyter Notebook with full analysis and modeling |
-| [`24157_Mohammad_Tayyab_Alam_Midterm_KAGGLE.html`](./24157_Mohammad_Tayyab_Alam_Midterm_KAGGLE.html) | Rendered HTML version of notebook |
-| [`24157_Mohammad_Tayyab_Alam_MIDTERM_KAGGLE.pdf`](./24157_Mohammad_Tayyab_Alam_MIDTERM_KAGGLE.pdf) | Final PDF presentation |
-| [`FDA KAGGLE SUMMARY.docx`](./FDA%20KAGGLE%20SUMMARY.docx) | One-page project summary |
-| [`Financial Data Analytics_ Spring 2025.pdf`](./Financial%20Data%20Analytics_%20Spring%202025.pdf) | Midterm Question Paper |
+| [`24157_Mohammad_Tayyab_Alam_Midterm_KAGGLE.ipynb`](https://github.com/tayyabalam77/course-progress/blob/main/Midterm_Kaggle_Project/24157_Mohammad_Tayyab_Alam_Midterm_KAGGLE%20.ipynb) | Jupyter Notebook with full analysis and modeling |
+| [`24157_Mohammad_Tayyab_Alam_Midterm_KAGGLE.html`](https://github.com/tayyabalam77/course-progress/blob/main/Midterm_Kaggle_Project/24157_Mohammad_Tayyab_Alam_Midterm_KAGGLE%20.html) | Rendered HTML version of notebook |
+| [`24157_Mohammad_Tayyab_Alam_MIDTERM_KAGGLE.pdf`](https://github.com/tayyabalam77/course-progress/blob/main/Midterm_Kaggle_Project/24157_Mohammad_Tayyab_Alam_MIDTERM_KAGGLE%20.pdf) | Final PDF presentation |
+| [`FDA KAGGLE SUMMARY.docx`](https://github.com/tayyabalam77/course-progress/blob/main/Midterm_Kaggle_Project/FDA%20KAGGLE%20SUMMARY.docx) | One-page project summary |
+| [`Financial Data Analytics_ Spring 2025.pdf`](https://github.com/tayyabalam77/course-progress/blob/main/Midterm_Kaggle_Project/Financial%20Data%20Analytics_%20Spring%202025%20.pdf) | Midterm Question Paper |
 
 ---
 
