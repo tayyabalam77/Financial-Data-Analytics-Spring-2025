@@ -17,7 +17,7 @@ After building and evaluating multiple machine learning models, we proposed a **
 
 | File | Description |
 |------|-------------|
-| [FDA_Final_Project_Group_17.ipynb](FDA_Final_Project_Group_17.ipynb) | Main Jupyter notebook with all preprocessing, model training, evaluation, and insight extraction |
+| [FDA_Final_Project_Group_17.ipynb](https://github.com/tayyabalam77/course-progress/blob/main/Final_Project/FDA_Final%20Project_Group%2017.ipynb) | Main Jupyter notebook with all preprocessing, model training, evaluation, and insight extraction |
 | [FDA_Final_Project_Group_17.html](FDA_Final_Project_Group_17.html) | Rendered notebook output with visuals, tables, and explanations |
 | [FDA Final Presentation.pdf](FDA%20Final%20Presentation.pdf) | Summary of findings and proposal presentation |
 | [Nova_credit_simulated_dataset_10000.csv](Nova_credit_simulated_dataset_10000.csv) | Cleaned and feature-engineered training dataset (10,000 rows) |
