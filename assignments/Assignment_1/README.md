@@ -10,6 +10,7 @@ This folder contains all files related to Assignment 1, including:
 - `Mohammad_Tayyab_Alam_24157_Assignment_1_Linear_Regression_Salary.ipynb`
 - `Mohammad_Tayyab_Alam_24157_Assignment_1_MLR_Startup_Profit.ipynb`
 - `Mohammad_Tayyab_Alam_24157_Assignment_1_Studentp_Regression_Applied.ipynb`
+- [Mohammad_Tayyab_Alam_24157_Assignment_1_Answers.docx](./Mohammad_Tayyab_Alam_24157_Assignment_1_Answers.docx): Detailed written answers to conceptual questions.
 
 ## Summary:
 This assignment covered:
