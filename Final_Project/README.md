@@ -17,12 +17,13 @@ After building and evaluating multiple machine learning models, we proposed a **
 
 | File | Description |
 |------|-------------|
-| [FDA_Final_Project_Group_17.ipynb](Final_Project/FDA_Final_Project_Group_17.ipynb) | Main Jupyter notebook with all preprocessing, model training, evaluation, and insight extraction |
-| [FDA_Final_Project_Group_17.html](Final_Project/FDA_Final_Project_Group_17.html) | Rendered notebook output with visuals, tables, and explanations |
-| [FDA Final Presentation.pdf](Final_Project/FDA%20Final%20Presentation.pdf) | Summary of findings and proposal presentation |
-| [Nova_credit_simulated_dataset_10000.csv](Final_Project/Nova_credit_simulated_dataset_10000.csv) | Cleaned and feature-engineered training dataset (10,000 rows) |
-| [nova_credit_blind_test_700.csv](Final_Project/nova_credit_blind_test_700.csv) | Blind test set (700 rows) used to validate generalizability |
-| [Key_Findings.md](Final_Project/Key_Findings.md) | Independent summary of insights, feature importance, top-performing models, and business implications |
+| [FDA_Final_Project_Group_17.ipynb](FDA_Final_Project_Group_17.ipynb) | Main Jupyter notebook with all preprocessing, model training, evaluation, and insight extraction |
+| [FDA_Final_Project_Group_17.html](FDA_Final_Project_Group_17.html) | Rendered notebook output with visuals, tables, and explanations |
+| [FDA Final Presentation.pdf](FDA%20Final%20Presentation.pdf) | Summary of findings and proposal presentation |
+| [Nova_credit_simulated_dataset_10000.csv](Nova_credit_simulated_dataset_10000.csv) | Cleaned and feature-engineered training dataset (10,000 rows) |
+| [nova_credit_blind_test_700.csv](nova_credit_blind_test_700.csv) | Blind test set (700 rows) used to validate generalizability |
+| [Key_Findings.md](Key_Findings.md) | Independent summary of insights, feature importance, top-performing models, and business implications |
+
 
 
 ---
