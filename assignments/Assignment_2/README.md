@@ -78,11 +78,11 @@ This assignment was a deep learning experience for me. Here's what I learned:
 
 ---
 
-##  Files
+## 📂 Files
 
-- `assignment_2.ipynb`: Jupyter Notebook with full code and results
-- `assignment_2.py`: Python version for script-based execution
-- `insurance_claims.csv`: Dataset used for training and evaluation
+- [`Mohammad_Tayyab_Alam_24157_Assignment_2.ipynb`](https://github.com/tayyabalam77/Financial-Data-Analytics-Spring-2025/blob/main/assignments/Assignment_2/Mohammad_Tayyab_Alam_24157_Assignment_2%20.ipynb): Jupyter Notebook with full code and results  
+- [`insurance_claims.csv`](https://github.com/tayyabalam77/Financial-Data-Analytics-Spring-2025/blob/main/assignments/Assignment_2/insurance_claims%20.csv): Dataset used for training and evaluation  
+
 
 ---
 
