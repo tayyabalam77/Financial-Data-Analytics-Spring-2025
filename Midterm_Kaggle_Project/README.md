@@ -32,6 +32,7 @@ The project explored **11 different models** using techniques like:
 | [`FDA KAGGLE SUMMARY.docx`](https://github.com/tayyabalam77/course-progress/blob/main/Midterm_Kaggle_Project/FDA%20KAGGLE%20SUMMARY.docx) | One-page project summary |
 | [`Financial Data Analytics_ Spring 2025.pdf`](https://github.com/tayyabalam77/course-progress/blob/main/Midterm_Kaggle_Project/Financial%20Data%20Analytics_%20Spring%202025%20.pdf) | Midterm Question Paper |
 
+**Note** : The data sets can be found on the Kaggle Competition Link.
 ---
 
 ##  Key Findings
