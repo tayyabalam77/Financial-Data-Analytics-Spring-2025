@@ -63,8 +63,8 @@ Several new features were created:
 
 ##  Files Included
 
-- [`Assignment3_KMeans_Clustering.ipynb`](https://github.com/your-username/your-repo/blob/main/Assignment3_KMeans_Clustering.ipynb): Complete Jupyter Notebook with feature engineering, clustering, and evaluation.
-
+- [`Assignment3_KMeans_Clustering.ipynb`](https://github.com/tayyabalam77/Financial-Data-Analytics-Spring-2025/blob/main/assignments/Assignment_3/Mohammad_Tayyab_Alam_24157_Assignment_3%20_1_%20.ipynb): Complete Jupyter Notebook with feature engineering, clustering, and evaluation.
+- [`Assignment3 Word Solutions.docx`](https://github.com/tayyabalam77/Financial-Data-Analytics-Spring-2025/blob/main/assignments/Assignment_3/Mohammad_Tayyab_Alam_24157_Assignment_3%20.docx): Word Doccument with solutions and questions that were assigned.
  **Citation:**  
 *Choi, J.N., Kwon, O., & Fernandez, J. (2024). HSBC: Leveraging Data Analytics and AI to Enhance Customer Life Cycle Management (ST138). HKUST Business School, Thompson Center for Business Case Studies.*
 
